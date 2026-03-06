@@ -1,0 +1,222 @@
+{
+  "appgroup_id": "690c50dfb79a97b3ebf5a367",
+  "appgroup_name": "Sprache-zu-Text Verwaltung",
+  "apps": {
+    "startseite": {
+      "app_id": "69aa9e4c0893e1fceef2589d",
+      "name": "Startseite",
+      "controls": {
+        "auswahl_aktion": {
+          "identifier": "auswahl_aktion",
+          "label": "Aktion ausw\u00e4hlen",
+          "type": "lookup",
+          "subtype": "select",
+          "fulltype": "lookup/select",
+          "description": "One selected option of multiple available options (or `null`/`None`).\n\nThe available options are defined in the `lookup_data` attribute of this control.\n\nThe field value will be the key in this `lookup_data` attribute (or `null`/`None`).\n\nDisplayed as single-select field in HTML pages.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": false,
+          "in_expert_search": true,
+          "lookup_data": {
+            "audio_aufnahmen": "Audio-Aufnahme hochladen",
+            "text_dokumente": "Text-Dokument erstellen"
+          }
+        }
+      }
+    },
+    "audio_aufnahmen": {
+      "app_id": "690c50c670415a9e4d1a70cd",
+      "name": "Audio-Aufnahmen",
+      "controls": {
+        "titel": {
+          "identifier": "titel",
+          "label": "Titel der Aufnahme",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": null,
+          "in_expert_search": true
+        },
+        "aufnahmedatum": {
+          "identifier": "aufnahmedatum",
+          "label": "Aufnahmedatum",
+          "type": "date",
+          "subtype": "date",
+          "fulltype": "date/date",
+          "description": "A calendar date consisting of year, month and day (or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>` (or `null`/`None`).\n\nFor example: `2000-02-29`.",
+          "required": null,
+          "in_list": false,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": null,
+          "in_expert_search": true
+        },
+        "audiodatei": {
+          "identifier": "audiodatei",
+          "label": "Audio-Datei",
+          "type": "file",
+          "subtype": null,
+          "fulltype": "file",
+          "description": "An uploaded file (or `null`/`None`).\n\nThe field value will be the URL to download the file in the form `https://my.living-apps.de/files/690c50c670415a9e4d1a70cd/data/<record-id>/<control-identifier>/<internal-id>` (or `null`/`None`).",
+          "required": null,
+          "in_list": false,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": null,
+          "in_expert_search": true
+        },
+        "dokumenttyp": {
+          "identifier": "dokumenttyp",
+          "label": "Dokumenttyp",
+          "type": "lookup",
+          "subtype": "select",
+          "fulltype": "lookup/select",
+          "description": "One selected option of multiple available options (or `null`/`None`).\n\nThe available options are defined in the `lookup_data` attribute of this control.\n\nThe field value will be the key in this `lookup_data` attribute (or `null`/`None`).\n\nDisplayed as single-select field in HTML pages.",
+          "required": null,
+          "in_list": false,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": null,
+          "in_expert_search": true,
+          "lookup_data": {
+            "stellenbeschreibung": "Stellenbeschreibung",
+            "arbeitsanweisung": "Arbeitsanweisung",
+            "prozessbeschreibung": "Prozessbeschreibung",
+            "einfachedokumentation": "Einfache Dokumentation"
+          }
+        },
+        "notizen": {
+          "identifier": "notizen",
+          "label": "Notizen",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea",
+          "description": "A string value that can contain multiple lines of text (or `null`/`None`).",
+          "required": null,
+          "in_list": false,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": null,
+          "in_expert_search": true
+        }
+      }
+    },
+    "text_dokumente": {
+      "app_id": "690c50caef7c15cf32d0901c",
+      "name": "Text-Dokumente",
+      "controls": {
+        "dokument_titel": {
+          "identifier": "dokument_titel",
+          "label": "Dokumenttitel",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": null,
+          "in_expert_search": true
+        },
+        "quelle_audio": {
+          "identifier": "quelle_audio",
+          "label": "Quelle Audio-Aufnahme",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "description": "A reference to a LivingApp record from the target lookup app 'Audio-Aufnahmen' with the id `690c50c670415a9e4d1a70cd` (or `null`/`None`).\n\nThe field value will be a valid record URL in the form `https://my.living-apps.de/rest/apps/690c50c670415a9e4d1a70cd/<record-id>` (or `null`/`None`).\n\nDisplayed as single-select field in HTML pages.",
+          "required": null,
+          "in_list": false,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": null,
+          "in_expert_search": true,
+          "lookup_app": "https://my.living-apps.de/rest/apps/690c50c670415a9e4d1a70cd"
+        },
+        "umwandlungsdatum": {
+          "identifier": "umwandlungsdatum",
+          "label": "Umwandlungsdatum",
+          "type": "date",
+          "subtype": "date",
+          "fulltype": "date/date",
+          "description": "A calendar date consisting of year, month and day (or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>` (or `null`/`None`).\n\nFor example: `2000-02-29`.",
+          "required": null,
+          "in_list": false,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": null,
+          "in_expert_search": true
+        },
+        "text_inhalt": {
+          "identifier": "text_inhalt",
+          "label": "Text-Inhalt",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea",
+          "description": "A string value that can contain multiple lines of text (or `null`/`None`).",
+          "required": null,
+          "in_list": false,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": null,
+          "in_expert_search": true
+        },
+        "bearbeitungsnotizen": {
+          "identifier": "bearbeitungsnotizen",
+          "label": "Bearbeitungsnotizen",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea",
+          "description": "A string value that can contain multiple lines of text (or `null`/`None`).",
+          "required": null,
+          "in_list": false,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": null,
+          "in_expert_search": true
+        },
+        "standarddokument": {
+          "identifier": "standarddokument",
+          "label": "Umgewandeltes Dokument",
+          "type": "file",
+          "subtype": null,
+          "fulltype": "file",
+          "description": "An uploaded file (or `null`/`None`).\n\nThe field value will be the URL to download the file in the form `https://my.living-apps.de/files/690c50caef7c15cf32d0901c/data/<record-id>/<control-identifier>/<internal-id>` (or `null`/`None`).",
+          "required": null,
+          "in_list": false,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": false,
+          "in_expert_search": true
+        }
+      }
+    }
+  },
+  "metadata": {
+    "apps_list": [
+      "Startseite",
+      "Audio-Aufnahmen",
+      "Text-Dokumente"
+    ]
+  }
+}
